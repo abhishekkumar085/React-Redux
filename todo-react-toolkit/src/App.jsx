@@ -1,22 +1,3 @@
-// import React from 'react';
-// import TodoInput from './Components/TodoInput';
-// import { useSelector } from 'react-redux';
-// import TodoList from './Components/TodoList';
-
-// const App = () => {
-//   const data = useSelector((state) => state.todo.todos);
-//   console.log(data, 'tododododo');
-//   return (
-//     <div>
-//       <h1>Todo - Redux Toolkit</h1>
-//       <TodoInput />
-//       <TodoList todos={data} />
-//     </div>
-//   );
-// };
-
-// export default App;
-
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import TodoInput from './Components/TodoInput';
@@ -28,8 +9,10 @@ const App = () => {
   const [editText, setEditText] = useState(''); // Track the text to edit
 
   return (
-    <div>
-      <h1>Todo - Redux Toolkit</h1>
+    <div className="max-w-lg mx-auto p-4 bg-gray-50 min-h-screen">
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
+        Todo - Redux Toolkit
+      </h1>
       <TodoInput
         editId={editId}
         editText={editText}
